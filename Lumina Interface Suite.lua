@@ -10,7 +10,7 @@ Kapa Ro | Programming
 
 
 
-local Release = "Beta 8"
+local Release = "Beta 1"
 local NotificationDuration = 6.5
 local LuminaFolder = "Lumina"
 local ConfigurationFolder = LuminaFolder.."/Configurations"
