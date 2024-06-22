@@ -32,6 +32,7 @@ local ScriptPvTab = Window:CreateTab("Script Hub Pv.", nil) -- Title, Image
 local ScriptPbTab = Window:CreateTab("Script Hub Pb.", nil)
 local ScriptPvSection = ScriptPvTab:CreateSection("Script Hub Private")
 local ScriptPbSection = ScriptPbTab:CreateSection("Script Hub Public")
+local PartnersSection = ScriptPbTab:CreateSection("Partners")
 
 Rayfield:Notify({
    Title = "Executed!",
@@ -52,6 +53,13 @@ local Button = ScriptPvTab:CreateButton({
    Name = "Arsenal | Shivam Hub 🟢",
    Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/Shivam-Scriptz/Arsenal-Shivam-Hub/main/arsenal-shivam-hub'))()
+   end,
+})
+
+local Button = ScriptPbTab:PartnersSection:CreateButton({
+   Name = "Laminu Hub | Son nMSBAz 🟢",
+   callback = function()
+         https://raw.githubusercontent.com/Shivam-Scriptz/LaminuHub/main/Laminu
    end,
 })
 
