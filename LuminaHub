@@ -63,7 +63,7 @@ local Button = ScriptPbTab:CreateButton({
 
 
 local Button = ScriptPbTab:CreateButton({
-   Name = "Chat Bypasser",
+   Name = "Chat Bypasser | Patched 🔴",
    Callback = function()
          loadstring(game:HttpGet('https://pastes.io/raw/umyxfdthh1'))()
    end,
