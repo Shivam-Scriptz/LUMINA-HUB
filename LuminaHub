@@ -56,7 +56,7 @@ local Button = ScriptPvTab:CreateButton({
    end,
 })
 
-local Button = ScriptPbTab:PartnersSection:CreateButton({
+local Button = PartnersSection:CreateButton({
    Name = "Laminu Hub | Son nMSBAz 🟢",
    callback = function()
          https://raw.githubusercontent.com/Shivam-Scriptz/LaminuHub/main/Laminu
