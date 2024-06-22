@@ -3,8 +3,8 @@
 Lumina Interface Suite
 by Shivam
 
-Shivam | Designing + Programming
-Kapa Ro | Programming
+shivam | Designing + Programming
+kapa_ro  | Programming
 
 ]]
 
@@ -13,8 +13,8 @@ Kapa Ro | Programming
 local Release = "Beta 1"
 local NotificationDuration = 6.5
 local LuminaFolder = "Lumina"
-local ConfigurationFolder = LuminaFolder.."/Configurations"
-local ConfigurationExtension = ".rfld"
+local ConfigurationFolder = RayfieldFolder.."/Configurations"
+local ConfigurationExtension = ".lmna"
 
 
 
@@ -896,7 +896,7 @@ function LuminaLibrary:CreateWindow(Settings)
 		if not Settings.ConfigurationSaving.FileName then
 			Settings.ConfigurationSaving.FileName = tostring(game.PlaceId)
 		end
-		if not isfolder(LuminaFolder.."/".."Configuration Folders") then
+		if not isfolder(RayfieldFolder.."/".."Configuration Folders") then
 
 		end
 		if Settings.ConfigurationSaving.Enabled == nil then
@@ -926,10 +926,10 @@ function LuminaLibrary:CreateWindow(Settings)
 	end
 
 	if Settings.Discord then
-		if not isfolder(LuminaFolder.."/Discord Invites") then
-			makefolder(LuminaFolder.."/Discord Invites")
+		if not isfolder(RayfieldFolder.."/Discord Invites") then
+			makefolder(RayfieldFolder.."/Discord Invites")
 		end
-		if not isfile(LuminaFolder.."/Discord Invites".."/"..Settings.Discord.Invite..ConfigurationExtension) then
+		if not isfile(RayfieldFolder.."/Discord Invites".."/"..Settings.Discord.Invite..ConfigurationExtension) then
 			if request then
 				request({
 					Url = 'http://127.0.0.1:6463/rpc?v=1',
@@ -947,7 +947,7 @@ function LuminaLibrary:CreateWindow(Settings)
 			end
 
 			if Settings.Discord.RememberJoins then -- We do logic this way so if the developer changes this setting, the user still won't be prompted, only new users
-				writefile(LuminaFolder.."/Discord Invites".."/"..Settings.Discord.Invite..ConfigurationExtension,"Lumina RememberJoins is true for this invite, this invite will not ask you to join again")
+				writefile(RayfieldFolder.."/Discord Invites".."/"..Settings.Discord.Invite..ConfigurationExtension,"Lumina RememberJoins is true for this invite, this invite will not ask you to join again")
 			end
 		else
 
@@ -960,8 +960,8 @@ function LuminaLibrary:CreateWindow(Settings)
 			return
 		end
 
-		if not isfolder(LuminaFolder.."/Key System") then
-			makefolder(LuminaFolder.."/Key System")
+		if not isfolder(RayfieldFolder.."/Key System") then
+			makefolder(RayfieldFolder.."/Key System")
 		end
 
 		if typeof(Settings.KeySettings.Key) == "string" then Settings.KeySettings.Key = {Settings.KeySettings.Key} end
@@ -982,9 +982,9 @@ function LuminaLibrary:CreateWindow(Settings)
 			Settings.KeySettings.FileName = "No file name specified"
 		end
 
-		if isfile(LuminaFolder.."/Key System".."/"..Settings.KeySettings.FileName..ConfigurationExtension) then
+		if isfile(RayfieldFolder.."/Key System".."/"..Settings.KeySettings.FileName..ConfigurationExtension) then
 			for _, MKey in ipairs(Settings.KeySettings.Key) do
-				if string.find(readfile(LuminaFolder.."/Key System".."/"..Settings.KeySettings.FileName..ConfigurationExtension), MKey) then
+				if string.find(readfile(RayfieldFolder.."/Key System".."/"..Settings.KeySettings.FileName..ConfigurationExtension), MKey) then
 					Passthrough = true
 				end
 			end
@@ -1083,7 +1083,7 @@ function LuminaLibrary:CreateWindow(Settings)
 					Passthrough = true
 					if Settings.KeySettings.SaveKey then
 						if writefile then
-							writefile(LuminaFolder.."/Key System".."/"..Settings.KeySettings.FileName..ConfigurationExtension, FoundKey)
+							writefile(RayfieldFolder.."/Key System".."/"..Settings.KeySettings.FileName..ConfigurationExtension, FoundKey)
 						end
 						LuminaLibrary:Notify({Title = "Key System", Content = "The key for this script has been saved successfully"})
 					end
