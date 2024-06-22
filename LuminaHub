@@ -59,7 +59,7 @@ local Button = ScriptPvTab:CreateButton({
 local Button = ScriptPvTab:CreateButton({
    Name = "Laminu Hub | Son nMSBAz 🟢",
    callback = function()
-         https://raw.githubusercontent.com/Shivam-Scriptz/LaminuHub/main/Laminu
+         loadstring(game:HttpGet('https://raw.githubusercontent.com/Shivam-Scriptz/LaminuHub/main/Laminu'))()
    end,
 })
 
