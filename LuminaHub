@@ -7,7 +7,7 @@ local Window = Rayfield:CreateWindow({
    LoadingSubtitle = "by Shivam | Kapa_Ro",
    ConfigurationSaving = {
       Enabled = true,
-      FolderName = lmnahub, -- Create a custom folder for your hub/game
+      FolderName = lumina, -- Create a custom folder for your hub/game
       FileName = "Lumina Hub"
    },
    Discord = {
@@ -30,7 +30,8 @@ local Window = Rayfield:CreateWindow({
 
 local ScriptPvTab = Window:CreateTab("Script Hub Pv.", nil) -- Title, Image
 local ScriptPbTab = Window:CreateTab("Script Hub Pb.", nil)
-local ScriptPvSection = ScriptPvTab:CreateSection("Script Hub Pv")
+local ScriptPvSection = ScriptPvTab:CreateSection("Script Hub Private")
+local ScriptPbSection = ScriptPbTab:CreateSection("Script Hub Public")
 
 Rayfield:Notify({
    Title = "Executed!",
@@ -48,14 +49,14 @@ Rayfield:Notify({
 })
 
 local Button = ScriptPvTab:CreateButton({
-   Name = "Arsenal | Shivam Hub",
+   Name = "Arsenal | Shivam Hub 🟢",
    Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/Shivam-Scriptz/Arsenal-Shivam-Hub/main/arsenal-shivam-hub'))()
    end,
 })
 
 local Button = ScriptPbTab:CreateButton({
-   Name = "Infinite Yield",
+   Name = "Infinite Yield 🟢",
    Callback = function()
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
    end,
@@ -71,7 +72,7 @@ local Button = ScriptPbTab:CreateButton({
 
 
 local button = ScriptPvTab:CreateButton({
-   Name = "Fe Marbles | Average Roblox/MC-Exploiter",
+   Name = "Fe Marbles | nMSBAz 🟢",
    Callback = function()
          loadstring(game:HttpGet('https://raw.githubusercontent.com/Shivam-Scriptz/femarble/main/femarble'))()
    end,
