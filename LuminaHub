@@ -32,7 +32,7 @@ local ScriptPvTab = Window:CreateTab("Script Hub Pv.", nil) -- Title, Image
 local ScriptPbTab = Window:CreateTab("Script Hub Pb.", nil)
 local ScriptPvSection = ScriptPvTab:CreateSection("Script Hub Private")
 local ScriptPbSection = ScriptPbTab:CreateSection("Script Hub Public")
-local PartnersSection = ScriptPbTab:CreateSection("Partners")
+local PartnePvSection2 = ScriptPbTab:CreateSection("Partners")
 
 Rayfield:Notify({
    Title = "Executed!",
