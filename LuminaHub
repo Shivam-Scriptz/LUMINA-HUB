@@ -54,9 +54,9 @@ local Button = ScriptPvTab:CreateButton({
    end,
 })
 
-local Button = ScriptPvTab:CreateButton({
-   Name = "Arsenal | Shivam Hub",
+local Button = ScriptPbTab:CreateButton({
+   Name = "Infinite Yield",
    Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/Shivam-Scriptz/IY/main/Infinite%20Yield'))()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
    end,
 })
