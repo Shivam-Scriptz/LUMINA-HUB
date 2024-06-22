@@ -32,7 +32,7 @@ local ScriptPvTab = Window:CreateTab("Script Hub Pv.", nil) -- Title, Image
 local ScriptPbTab = Window:CreateTab("Script Hub Pb.", nil)
 local ScriptPvSection = ScriptPvTab:CreateSection("Script Hub Private")
 local ScriptPbSection = ScriptPbTab:CreateSection("Script Hub Public")
-local PartnePvSection2 = ScriptPbTab:CreateSection("Partners")
+local PartnerPvSection2 = ScriptPbTab:CreateSection("Partners")
 
 Rayfield:Notify({
    Title = "Executed!",
@@ -56,7 +56,7 @@ local Button = ScriptPvTab:CreateButton({
    end,
 })
 
-local Button = PartnersSection:CreateButton({
+local Button = ScriptPvTab:CreateButton({
    Name = "Laminu Hub | Son nMSBAz 🟢",
    callback = function()
          https://raw.githubusercontent.com/Shivam-Scriptz/LaminuHub/main/Laminu
