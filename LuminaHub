@@ -17,7 +17,7 @@ local Window = Rayfield:CreateWindow({
    },
    KeySystem = true, -- Set this to true to use our key system
    KeySettings = {
-      Title = "Lumina Hub",
+      Title = "Lumina Hub 1.1",
       Subtitle = "Key System",
       Note = "Enter Key From Server | https://discord.gg/3RxhsASxXF",
       FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
@@ -56,7 +56,7 @@ local Button = ScriptPvTab:CreateButton({
 })
 
 local Button = ScriptPbTab:CreateButton({
-   Name = "Infinite Yield 🟢",
+   Name = "Infinite Yield | Moon (Premium Features Mod [by Shivam]) 🟢",
    Callback = function()
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
    end,
@@ -98,5 +98,13 @@ local Button = ScriptPbTab:CreateButton({
    Name = "The Ride | Marco 🟢",
    Callback = function()
          loadstring(game:HttpGet("https://raw.githubusercontent.com/Marco8642/science/main/the%20ride2", true))()
+   end,
+})
+
+
+local Button = ScriptPbTab:CreateButton({
+   Name = "GunFight-Arena | ScriptBlox 🟢",
+   Callback = function()
+         loadstring(game:HttpGet("https://scriptblox.com/raw/Gunfight-Arena-or-NEW-MODE-esp-tix-hitbox-13276"))()
    end,
 })
