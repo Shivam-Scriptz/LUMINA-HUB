@@ -60,3 +60,11 @@ local Button = ScriptPbTab:CreateButton({
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
    end,
 })
+
+
+local Button = ScriptPbTab:CreateButton({
+   Name = "Chat Bypasser",
+   Callback = function()
+         loadstring(game:HttpGet('https://pastes.io/raw/umyxfdthh1'))()
+   end,
+})
