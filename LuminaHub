@@ -89,7 +89,7 @@ local Button = ScriptPvTab:CreateButton({
 local Button = ScriptPbTab:CreateButton({
    Name = "Blade Ball | FFJ 🟢",
    Callback = function()
-         loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/BladeBallV3.lua"))()
+         loadstring(game:HttpGet('https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/BladeBallV3.lua'))()
    end,
 })
 
@@ -97,7 +97,7 @@ local Button = ScriptPbTab:CreateButton({
 local Button = ScriptPbTab:CreateButton({
    Name = "Airsoft-Fe | ScriptBlox 🟢",
    Callback = function()
-         loadstring(game:HttpGet("https://scriptblox.com/raw/Airsoft-FE-UPDATE-OP-SILENT-AIM-14200"))()
+         loadstring(game:HttpGet('https://scriptblox.com/raw/Airsoft-FE-UPDATE-OP-SILENT-AIM-14200'))()
    end,
 })
 
@@ -105,7 +105,7 @@ local Button = ScriptPbTab:CreateButton({
 local Button = ScriptPbTab:CreateButton({
    Name = "The Ride | Marco 🟢",
    Callback = function()
-         loadstring(game:HttpGet("https://raw.githubusercontent.com/Marco8642/science/main/the%20ride2", true))()
+         loadstring(game:HttpGet('https://raw.githubusercontent.com/Marco8642/science/main/the%20ride2', true))()
    end,
 })
 
@@ -113,6 +113,6 @@ local Button = ScriptPbTab:CreateButton({
 local Button = ScriptPbTab:CreateButton({
    Name = "GunFight-Arena | ScriptBlox 🟢",
    Callback = function()
-         loadstring(game:HttpGet("https://scriptblox.com/raw/Gunfight-Arena-or-NEW-MODE-esp-tix-hitbox-13276"))()
+         loadstring(game:HttpGet('https://scriptblox.com/raw/Gunfight-Arena-or-NEW-MODE-esp-tix-hitbox-13276'))()
    end,
 })
