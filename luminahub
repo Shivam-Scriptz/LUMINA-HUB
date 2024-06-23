@@ -107,7 +107,7 @@ local Button = PublicTab:CreateButton({
 })
 
 local MiscTabSection = MiscTab:CreateSection("Humanoid")
-local Input = Tab:CreateInput({
+local Input = MiscTab:CreateInput({
    Name = "WalkSpeed 🚶🏻‍♀️",
    PlaceholderText = "1 - 200",
    RemoveTextAfterFocusLost = true,
@@ -116,7 +116,7 @@ local Input = Tab:CreateInput({
    end,
 })
 
-local Input = Tab:CreateInput({
+local Input = MiscTab:CreateInput({
    Name = "JumpPower 🦘",
    PlaceholderText = "1 - 200",
    RemoveTextAfterFocusLost = true,
