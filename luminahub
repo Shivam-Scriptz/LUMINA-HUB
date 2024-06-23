@@ -63,7 +63,7 @@ local PrivateTabPartners = PrivateTab:CreateSection("Partners")
 local Button = PrivateTab:CreateButton({
    Name = "Laminu Hub | Noobster nMSBAz 🟢",
    Callback = function()
-       loadstring(game:HttpGet('https://raw.githubusercontent.com/Shivam-Scriptz/LaminuHub/main/Laminu'))()
+       loadstring(game:HttpGet('https://github.com/githubuser1038/my-hub/blob/main/the%20hub'))()
    end,
 })
 
@@ -100,5 +100,25 @@ local Button = PublicTab:CreateButton({
    Name = "GunFight-Arena | ScriptBlox 🟢",
    Callback = function()
        loadstring(game:HttpGet('https://scriptblox.com/raw/Gunfight-Arena-or-NEW-MODE-esp-tix-hitbox-13276'))()
+   end,
+})
+
+local MiscTab = Window:CreateTab("🎲Misc | Universal", nil)
+local MiscSection = MiscTab:CreateSection("Humanoid")
+local wsInt = MiscTab:CreateInput({
+   Name = "🚶🏻‍♀️ WalkSpeed",
+   PlaceHolderText = "1-999",
+   RemoveTextAfterFocusLost = true,
+   Callback = function(Text)
+       game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Text)
+   end,
+})
+
+local jpInt = MiscTab:CreateInput({
+   Name = "🦘 JumpPower",
+   PlaceHolderText = "1-999",
+   RemoveTextAfterFocusLost = true,
+   Callback = function(Text)
+       game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Text)
    end,
 })
