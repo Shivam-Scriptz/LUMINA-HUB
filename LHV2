@@ -64,7 +64,7 @@ local Button = PrivateTab:CreateButton({
 
 local PrivateTabPartners = PrivateTab:CreateSection("Partners")
 local Button = PrivateTab:CreateButton({
-   Name = "Laminu Hub | Noobster nMSBAz 🟢",
+   Name = "The Hub | Noobster nMSBAz 🟢",
    Callback = function()
        loadstring(game:HttpGet('https://pastefy.app/3uVeiy7s/raw'))()
    end,
