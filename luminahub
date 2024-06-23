@@ -1,5 +1,5 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
-
+--loadingScreen
 local Window = Rayfield:CreateWindow({
    Name = "⚡LUMINA HUB⚡",
    LoadingTitle = "Beta 1.2",
@@ -41,8 +41,11 @@ Rayfield:Notify({
 },
 })
 
+--Tabs
+
 local PrivateTab = Window:CreateTab("🔒Private Scripts", nil) -- Title, Image
 local PublicTab = Window:CreateTab("🔓Public Scripts", nil)
+local MiscTab = Window:CreateTab("🎲Misc", nil)
 local PrivateTabSection = PrivateTab:CreateSection("Private Scripts")
 
 local Button = PrivateTab:CreateButton({
@@ -103,22 +106,21 @@ local Button = PublicTab:CreateButton({
    end,
 })
 
-local MiscTab = Window:CreateTab("🎲Misc | Universal", nil)
-local MiscSection = MiscTab:CreateSection("Humanoid")
-local wsInt = MiscTab:CreateInput({
-   Name = "🚶🏻‍♀️ WalkSpeed",
-   PlaceHolderText = "1-999",
+local MiscTabSection = MiscTab:CreateSection("Humanoid")
+local Input = Tab:CreateInput({
+   Name = "WalkSpeed 🚶🏻‍♀️",
+   PlaceholderText = "1 - 200",
    RemoveTextAfterFocusLost = true,
    Callback = function(Text)
-       game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Text)
+         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Text)
    end,
 })
 
-local jpInt = MiscTab:CreateInput({
-   Name = "🦘 JumpPower",
-   PlaceHolderText = "1-999",
+local Input = Tab:CreateInput({
+   Name = "JumpPower 🦘",
+   PlaceholderText = "1 - 200",
    RemoveTextAfterFocusLost = true,
    Callback = function(Text)
-       game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Text)
+          game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Text)
    end,
 })
