@@ -2,7 +2,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 --loadingScreen
 local Window = Rayfield:CreateWindow({
    Name = "⚡LUMINA HUB⚡",
-   LoadingTitle = "Beta 1.2",
+   LoadingTitle = "Beta 2",
    LoadingSubtitle = "by Shivam & Kapa_Ro",
    ConfigurationSaving = {
       Enabled = true,
@@ -16,7 +16,7 @@ local Window = Rayfield:CreateWindow({
    },
    KeySystem = true, -- Set this to true to use our key system
    KeySettings = {
-      Title = "Lumina Hub V1.2",
+      Title = "Lumina Hub V 2",
       Subtitle = "Key System",
       Note = "Join discord to get key",
       FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
