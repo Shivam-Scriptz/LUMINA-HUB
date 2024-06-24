@@ -1,0 +1,117 @@
+local AnnGUI = Instance.new("Frame")
+local background = Instance.new("Frame")
+local TextBox = Instance.new("TextLabel")
+local shadow = Instance.new("Frame")
+local PopupText = Instance.new("TextLabel")
+local Exit = Instance.new("ImageButton")
+local ExecuteButton = Instance.new("TextButton")
+
+local screenGui = Instance.new("ScreenGui", game.CoreGui)
+
+local executed = false  -- Flag to track if script has been executed
+
+-- Configure AnnGUI
+AnnGUI.Name = 'Boomer'
+AnnGUI.Parent = screenGui
+AnnGUI.BackgroundTransparency = 1
+AnnGUI.Position = UDim2.new(0.5, -180, 0.5, -97.5)
+AnnGUI.Size = UDim2.new(0, 360, 0, 195)  -- Increased height to accommodate the button
+AnnGUI.ZIndex = 2
+
+-- Background frame
+background.Name = "background"
+background.Parent = AnnGUI
+background.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+background.BorderSizePixel = 0
+background.Position = UDim2.new(0, 0, 0, 20)
+background.Size = UDim2.new(0, 360, 0, 135)
+
+-- Text label for GUI title
+TextBox.Parent = background
+TextBox.BackgroundTransparency = 1
+TextBox.Position = UDim2.new(0, 0, 0, 0)
+TextBox.Size = UDim2.new(1, 0, 0.3, 0)
+TextBox.Font = Enum.Font.Gotham
+TextBox.TextSize = 18
+TextBox.TextWrapped = true
+TextBox.Text = 'Made By Shivam'  -- Updated text
+TextBox.TextColor3 = Color3.new(1, 1, 1)
+TextBox.TextXAlignment = Enum.TextXAlignment.Center
+TextBox.TextYAlignment = Enum.TextYAlignment.Top
+
+-- New button setup for Execute
+ExecuteButton.Name = "ExecuteButton"
+ExecuteButton.Parent = background
+ExecuteButton.BackgroundColor3 = Color3.fromRGB(35, 35, 35)  -- Darker background color
+ExecuteButton.BorderSizePixel = 0
+ExecuteButton.Position = UDim2.new(0, 0, 0.5, -20)  -- Center horizontally, positioned halfway vertically
+ExecuteButton.Size = UDim2.new(1, 0, 0, 40)  -- Full width, fixed height
+ExecuteButton.Font = Enum.Font.GothamBold
+ExecuteButton.TextSize = 20  -- Increased text size for better readability
+ExecuteButton.Text = "EXECUTE"
+ExecuteButton.TextColor3 = Color3.new(1, 1, 1)  -- White text color
+
+-- Shadow frame
+shadow.Name = "shadow"
+shadow.Parent = AnnGUI
+shadow.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+shadow.BorderSizePixel = 0
+shadow.Size = UDim2.new(0, 360, 0, 20)
+
+-- Popup text label configuration
+PopupText.Name = "PopupText"
+PopupText.Parent = shadow
+PopupText.BackgroundTransparency = 1
+PopupText.Position = UDim2.new(0, 51, 0, 0)
+PopupText.Size = UDim2.new(0.76, -16, 0.95, 0)
+PopupText.Font = Enum.Font.GothamBold  -- Bold font for emphasis
+PopupText.TextSize = 18  -- Increased text size for emphasis
+PopupText.Text = "⚡LUMINA HUB⚡"  -- Updated text
+PopupText.TextColor3 = Color3.fromRGB(128, 0, 128)  -- Deep purple color for attention
+PopupText.TextWrapped = true
+
+-- Exit button configuration
+Exit.Name = "Exit"
+Exit.Parent = shadow
+Exit.BackgroundTransparency = 1
+Exit.Size = UDim2.new(0, 20, 0, 20)
+Exit.Position = UDim2.new(1, -20, 0, 0) -- Adjusted position for the exit button
+Exit.Image = "rbxassetid://2132544126"
+
+-- Function to animate the GUI into view
+AnnGUI.Position = UDim2.new(0.5, -180, 0, -400)  -- Start off-screen
+AnnGUI:TweenPosition(UDim2.new(0.5, -180, 0.5, -97.5), "InOut", "Quart", 0.5, true)  -- Animate on-screen
+
+-- Connect the Exit button to close the GUI
+Exit.MouseButton1Click:Connect(function()
+    AnnGUI:TweenPosition(UDim2.new(0.5, -180, 0, -400), "InOut", "Quart", 0.5, true)
+    wait(0.6)
+    AnnGUI:Destroy()
+end)
+
+-- Function to execute the loadstring directly
+ExecuteButton.MouseButton1Click:Connect(function()
+    if not executed then
+        executed = true
+        print("Lumina Hub Loaded")
+        -- Execute the script
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Shivam-Scriptz/LUMINA-HUB/main/lumina.lua'))()
+    end
+end)
+
+-- Button animation
+local originalSize = ExecuteButton.Size
+
+local function animateButton(size)
+    ExecuteButton:TweenSize(size, Enum.EasingDirection.Out, Enum.EasingStyle.Quart, 0.2, true)
+end
+
+ExecuteButton.MouseEnter:Connect(function()
+    animateButton(UDim2.new(1, 0, 1, 0))  -- Expand uniformly
+    ExecuteButton.TextColor3 = Color3.fromRGB(128, 0, 128)  -- Deep purple text color on hover
+end)
+
+ExecuteButton.MouseLeave:Connect(function()
+    animateButton(originalSize)
+    ExecuteButton.TextColor3 = Color3.new(1, 1, 1)  -- White text color on exit
+end)
